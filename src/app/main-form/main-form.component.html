@@ -1,0 +1,50 @@
+<main>
+  <div class="form-register">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <h4>Form</h4>
+      <p>
+        Name:
+        <input class="controls" type="text" [formControl]="nameControl">
+      </p>
+      <p>
+        Last Name:
+        <input class="controls" type="text" formControlName="lastName">
+      </p>
+      <p>
+        Fecha:
+        <input class="controls" type="date" formControlName="date">
+      </p>
+      <p>
+        Email:
+        <input class="controls" type="email" formControlName="email">
+      </p>
+      <p>
+        Gender:
+        <br>
+        <select class="controls" type="email" formControlName="gender">
+          <option value="">Select Gender</option>
+          <option value="'Female'">Female</option>
+          <option value="'Male'">Male</option>
+          <option value="'Other'">Other</option>
+        </select>
+      </p>
+      <div>
+        Describe:
+        <br>
+        <textarea class="controls" col="30" rows="10"></textarea>
+      </div>
+      <div class="col-12 d-flex justify-content-end">
+        <button [disabled]="registerForm.invalid" class="btn " type="submit">Send</button>
+      </div>
+    </form>
+  </div>
+  <!-- <div class="col-4">
+    <h3>Es valido: {{registerForm.valid}}</h3>
+    <pre>
+      {{registerForm.value | json}}
+      <small class="text-danger">
+        Este campo es requerido
+      </small>
+    </pre>
+  </div> -->
+</main>
