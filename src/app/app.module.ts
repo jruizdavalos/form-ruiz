@@ -4,12 +4,14 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { MainFormComponent } from './main-form/main-form.component';
+import { ErrorComponent } from './shared/components/error/error.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MainFormComponent,
+    ErrorComponent,
 
 
   ],

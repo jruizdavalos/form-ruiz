@@ -1,0 +1,23 @@
+<small class="text-danger">
+  <div
+    *ngIf="control?.touched && control?.errors?.['required'] || control?.errors?.['minlength'] || control?.errors?.['email']">
+    <div *ngFor="let error of control?.errors | keyvalue">
+      <div [ngSwitch]="error.key">
+
+        <div class="text-danger" *ngSwitchCase="'required'">
+          This field is required
+        </div>
+        <div class="text-danger" *ngSwitchCase="'minlength'">
+          Must have at least {{error.value.requieredLenght}} characters
+        </div>
+        <div class="text-danger" *ngSwitchCase="'email'">
+          put a valid email
+        </div>
+
+        <div *ngSwitchDefault>
+          unknown error
+        </div>
+      </div>
+    </div>
+  </div>
+</small>

@@ -15,8 +15,8 @@ export class MainFormComponent implements OnInit {
   dateControl = new FormControl('', [Validators.required])
   genderControl = new FormControl('', [Validators.required])
 
-  emailControl = new FormControl('', [Validators.required])
-  textControl = new FormControl('')
+  emailControl = new FormControl('', [Validators.required, Validators.email])
+  textControl = new FormControl('', [Validators.required, Validators.minLength(6)])
 
 
   registerForm = new FormGroup({
