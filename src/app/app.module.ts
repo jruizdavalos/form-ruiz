@@ -5,6 +5,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MainFormComponent } from './main-form/main-form.component';
 import { ErrorComponent } from './shared/components/error/error.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PagesModule } from './pages/pages.module';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { ErrorComponent } from './shared/components/error/error.component';
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    PagesModule
 
   ],
   providers: [],
